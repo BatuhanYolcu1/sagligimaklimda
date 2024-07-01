@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="HomeNesnesi"
+            type="com.example.sagligimaklimda.FragmentHome" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        tools:context=".FragmentHome">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/firstL"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/card_acil_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/emer_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ACİL DURUM ÇAĞRISI"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/baseline_call_24"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:id="@+id/emerNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="05334520821"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView"
+                                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/firstCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/card_blood_group"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="KAN GRUBU"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                        <LinearLayout
+                            android:id="@+id/bloodLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pointsEarnedTextView">
+
+                            <ImageView
+                                android:id="@+id/dropBlood"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/baseline_water_drop_24"
+                                app:layout_constraintBottom_toBottomOf="@+id/pointsTextView"
+                                app:layout_constraintTop_toTopOf="@+id/pointsTextView"
+                                app:tint="@color/white"
+                                tools:ignore="MissingConstraints"
+                                tools:layout_editor_absoluteX="43dp" />
+
+                            <TextView
+                                android:id="@+id/bloodGroup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="45678"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/coinImageView"
+                                app:layout_constraintTop_toBottomOf="@+id/pointsEarnedTextView" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/accountEdit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="HESAP"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="2"
+                        android:contentDescription="@null"
+                        android:src="@drawable/baseline_account_box_24" />
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sectionPart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="İyi Günler"
+                            android:textColor="#8E8B8B"
+                            android:textSize="32dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/drugList"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#FFDD00"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="İlaçlarım"
+                                        android:textColor="@color/white"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kullanacağın ilaçları listele"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp"
+                                        android:textStyle="italic" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/img"
+                                        app:tint="@color/white" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/phList"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00D004"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Nöbetçi Eczane"
+                                        android:textColor="@color/white"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Yakınındaki nöbetçi eczaneleri gör"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp"
+                                        android:textStyle="italic" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/ecz"
+                                        app:tint="@color/white" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/dateList"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#58A7EF"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Yaklaşan Muayeneler"
+                                        android:textColor="@color/white"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Yaklaşan tedavileri gör ya da yenisini oluştur"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp"
+                                        android:textStyle="italic" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/baseline_local_hospital_24"
+                                        app:tint="@color/white" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

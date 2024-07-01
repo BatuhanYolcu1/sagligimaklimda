@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.sagligimaklimda.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_userInfoEdit"
+            app:destination="@id/userInfoEdit" />
+        <action
+            android:id="@+id/action_fragmentHome_to_drugListFragment"
+            app:destination="@id/drugListFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_pharmacyList"
+            app:destination="@id/pharmacyList" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentDateList"
+            app:destination="@id/fragmentDateList" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoEdit"
+        android:name="com.example.sagligimaklimda.UserInfoEdit"
+        android:label="fragment_user_info_edit"
+        tools:layout="@layout/fragment_user_info_edit" >
+        <action
+            android:id="@+id/action_userInfoEdit_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/drugListFragment"
+        android:name="com.example.sagligimaklimda.DrugListFragment"
+        android:label="fragment_drug_list"
+        tools:layout="@layout/fragment_drug_list" >
+        <action
+            android:id="@+id/action_drugListFragment_to_fragmentSetDrug"
+            app:destination="@id/fragmentSetDrug" />
+        <action
+            android:id="@+id/action_drugListFragment_to_fragmentUpdateDrug"
+            app:destination="@id/fragmentUpdateDrug" />
+        <action
+            android:id="@+id/action_drugListFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSetDrug"
+        android:name="com.example.sagligimaklimda.FragmentSetDrug"
+        android:label="fragment_set_drug"
+        tools:layout="@layout/fragment_set_drug" >
+        <action
+            android:id="@+id/action_fragmentSetDrug_to_drugListFragment"
+            app:destination="@id/drugListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pharmacyList"
+        android:name="com.example.sagligimaklimda.PharmacyList"
+        android:label="fragment_pharmacy_list"
+        tools:layout="@layout/fragment_pharmacy_list" />
+    <fragment
+        android:id="@+id/fragmentUpdateDrug"
+        android:name="com.example.sagligimaklimda.FragmentUpdateDrug"
+        android:label="fragment_update_drug"
+        tools:layout="@layout/fragment_update_drug" >
+        <action
+            android:id="@+id/action_fragmentUpdateDrug_to_drugListFragment"
+            app:destination="@id/drugListFragment" />
+        <argument
+            android:name="currentDrug"
+            app:argType="com.example.sagligimaklimda.model.Drug" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDateList"
+        android:name="com.example.sagligimaklimda.FragmentDateList"
+        android:label="fragment_date_list"
+        tools:layout="@layout/fragment_date_list" >
+        <action
+            android:id="@+id/action_fragmentDateList_to_fragmentSetDate"
+            app:destination="@id/fragmentSetDate" />
+        <action
+            android:id="@+id/action_fragmentDateList_to_fragmentUpdateDate"
+            app:destination="@id/fragmentUpdateDate" />
+        <action
+            android:id="@+id/action_fragmentDateList_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSetDate"
+        android:name="com.example.sagligimaklimda.FragmentSetDate"
+        android:label="fragment_set_date"
+        tools:layout="@layout/fragment_set_date" >
+        <action
+            android:id="@+id/action_fragmentSetDate_to_fragmentDateList"
+            app:destination="@id/fragmentDateList" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUpdateDate"
+        android:name="com.example.sagligimaklimda.FragmentUpdateDate"
+        android:label="fragment_update_date"
+        tools:layout="@layout/fragment_update_date" >
+        <action
+            android:id="@+id/action_fragmentUpdateDate_to_fragmentDateList"
+            app:destination="@id/fragmentDateList" />
+        <argument
+            android:name="currentDate"
+            app:argType="com.example.sagligimaklimda.model.DateModel" />
+    </fragment>
+</navigation>
